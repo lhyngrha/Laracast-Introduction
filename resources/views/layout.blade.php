@@ -7,11 +7,13 @@
 
     <title>Laravel</title>
 
-    <link rel="stylesheet" href="{{ elixir('/css/app.css') }}">
-    {{--<link rel="stylesheet" href="/css/style.css">--}}
+    {{--<link rel="stylesheet" href="{{ elixir('/css/app.css') }}">--}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-    @yield('content')
+    <div class="container">
+        @yield('content')
+    </div>
     @yield('footer')
 </body>
 </html>
