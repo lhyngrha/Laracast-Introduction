@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use DB;
+use App\Card;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -10,6 +12,15 @@ class CardsController extends Controller
 {
     public function index()
     {
-        return view('cards.index');
+        $cards = Card::all();
+        // $cards = DB::table('cards')->get();
+        return view('cards.index', compact('cards'));
+    }
+
+    public function show(Card $card)
+    {
+
+        // $card = Card::find($id);
+         return view('cards.show', compact('card'));
     }
 }
